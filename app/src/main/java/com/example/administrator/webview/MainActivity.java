@@ -17,10 +17,12 @@ public class MainActivity extends AppCompatActivity {
      * 要显示信息的网址
      */
     private EditText editText;
+
     /**
      * 确定按钮
      */
     private Button button;
+
     /**
      * 展示
      */
