@@ -8,10 +8,22 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * @author gongkaiqiang
+ */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * 要显示信息的网址
+     */
     private EditText editText;
+    /**
+     * 确定按钮
+     */
     private Button button;
+    /**
+     * 展示
+     */
     private WebView webView;
 
     @Override
@@ -33,12 +45,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-    //利用webView的loadUrl方法
+    /**
+     * 利用webView的loadUrl方法
+     * @param url 显示的url
+     */
     public void openBrowser(String url) {
-        webView.setScrollBarStyle(View.SCROLLBARS_OUTSIDE_OVERLAY);//滚动条在WebView内侧显示
-        webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);//滚动条在WebView外侧显示
-        webView.setVerticalScrollBarEnabled(false); //垂直不显示
+        //滚动条在WebView内侧显示
+        webView.setScrollBarStyle(View.SCROLLBARS_OUTSIDE_OVERLAY);
+        //滚动条在WebView外侧显示
+        webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        //垂直不显示
+        webView.setVerticalScrollBarEnabled(false);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
